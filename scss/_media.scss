@@ -1,0 +1,73 @@
+//Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+	body {
+		background-position: top right;
+	}
+}
+
+//Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+}
+
+//Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+	:root {
+		font-size: 55%;
+	}
+	main {
+		margin-top: 6.4rem;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+	}
+	body {
+		height: 100vh;
+		background-image: url(/images/bg-top.svg), url(/images/bg-bottom.svg);
+		background-position: top right, bottom left;
+	}
+	.container {
+		padding: 0 2rem;
+	}
+	.main {
+		&__card {
+			margin: initial;
+			min-width: 327px;
+			&:not(:last-child) {
+				margin-bottom: 0;
+			}
+			&:nth-child(2) {
+				padding: 5rem 3.1rem;
+			}
+		}
+	}
+}
+
+//Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1440px) {
+	:root {
+		font-size: 62.5%;
+	}
+	.container {
+		padding: 0 19.5rem;
+	}
+	header {
+		margin-top: 7.1rem;
+	}
+	.title {
+		&__price-toggler {
+			margin-top: 4rem;
+		}
+	}
+	.main {
+		&__card {
+			min-width: 350px;
+			&:not(:nth-child(2)) {
+				padding: 3.1rem;
+			}
+			&:nth-child(2) {
+				padding: 5.5rem 3.1rem;
+			}
+		}
+	}
+}
